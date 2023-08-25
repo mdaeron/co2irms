@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-__version__ = 2.0
+__version__ = 2.1
 
 import numpy as np
 
@@ -228,7 +228,7 @@ def standardize(
 			out['samples'][s]['SE_d18O_VPDB'] = out['samples'][s]['SE_d18O_VSMOW'] / 1.03092 / alpha18_acid
 			out['samples'][s]['95CL_d18O_VPDB'] = out['samples'][s]['SE_d18O_VPDB'] * out['t95_d18O']
 
-	csv = f'Session,N,Na_d13C,Nu_d13C,Na_d18O,Nu_d18O,d45_scaling,SE_d45_scaling,d46_scaling,SE_d46_scaling,d13C_VPDB_of_wg,SE_d13C_VPDB_of_wg,d18O_VSMOW,SE_d18O_VSMOW_of_wg,RMSE_d13C_VPDB,RMSE_d18O_VPDB'
+	csv = f'Session,N,Na_d13C,Nu_d13C,Na_d18O,Nu_d18O,d45_scaling,SE_d45_scaling,d46_scaling,SE_d46_scaling,d13C_VPDB_of_wg,SE_d13C_VPDB_of_wg,d18O_VSMOW_of_wg,SE_d18O_VSMOW_of_wg,RMSE_d13C_VPDB,RMSE_d18O_VPDB'
 	for s in sessions:
 		csv += f'\n{s}'
 		csv += f',{out["sessions"][s]["N"]}'
